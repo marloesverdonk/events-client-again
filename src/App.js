@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Route } from 'react-router-dom'
-import Home from './components/Home'
+import EventsListContainer from './components/EventsListContainer'
 
 
 class App extends React.Component {
@@ -11,8 +11,9 @@ class App extends React.Component {
         <header className="App-header">
           <h1>Events</h1>
         </header>
-
-        <Route path='/' exact component={Home}/>
+        <main>
+          <Route path='/' exact component={EventsListContainer} />
+        </main>
       </div>
     );
   }
