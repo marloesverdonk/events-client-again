@@ -2,7 +2,8 @@ import React from 'react';
 import './App.css';
 import { Route } from 'react-router-dom'
 import EventsListContainer from './components/EventsListContainer'
-import CreateEventFormContainer from './components/CreateEventFormContainer'
+import EventDetails from './components/EventDetails';
+
 
 
 class App extends React.Component {
@@ -14,7 +15,7 @@ class App extends React.Component {
         </header>
         <main>
           <Route path='/' exact component={EventsListContainer} />
-          <CreateEventFormContainer/>
+          <Route path='/events/:id' component={EventDetails}/>
         </main>
       </div>
     );

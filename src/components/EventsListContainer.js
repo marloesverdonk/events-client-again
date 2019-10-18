@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import EventsList from './EventsList'
 import { loadEvents } from '../actions/events'
+import CreateEventForm from './CreateEventForm'
 
 class EventsListContainer extends React.Component {
   componentDidMount(){
@@ -12,6 +13,8 @@ class EventsListContainer extends React.Component {
     return(
       <div>
         <EventsList events={this.props.events}/>
+        <CreateEventForm/>
+        
       </div>
     )
   }
